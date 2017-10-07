@@ -14,9 +14,10 @@
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
 (setq org-log-done t)
-(desktop-save-mode t)
 
 (global-set-key (kbd "C-d") 'duplicate-line)
 (global-set-key (kbd "<delete>") 'delete-char)
 
 (server-start)
+
+;(desktop-save-mode t) ; does not work with server mode
