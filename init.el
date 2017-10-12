@@ -18,6 +18,19 @@
 (global-set-key (kbd "C-d") 'duplicate-line)
 (global-set-key (kbd "<delete>") 'delete-char)
 
+;; define function to shutdown emacs server instance
+(defun server-shutdown ()
+  "Save buffers, Quit, and Shutdown (kill) server"
+  (interactive)
+  (save-some-buffers)
+  (kill-emacs)
+  )
+
+(savehist-mode 1)
+
 (server-start)
+
+;(load-file "~/.emacs.d/themes/inkpot-theme-20170709.1858.el")
+(find-file "u:/Dateien/Notes.org")
 
 ;(desktop-save-mode t) ; does not work with server mode
