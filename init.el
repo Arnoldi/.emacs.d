@@ -26,11 +26,13 @@
   (kill-emacs)
   )
 
+(add-to-list 'auto-mode-alist '("\\.pde\\'" . java-mode))
+
 (savehist-mode 1)
 
 (server-start)
 
-;(load-file "~/.emacs.d/themes/inkpot-theme-20170709.1858.el")
+(load-file "~/.emacs.d/themes/inkpot-theme-20170709.1858.el")
 (find-file "u:/Dateien/Notes.org")
 
 ;(desktop-save-mode t) ; does not work with server mode
