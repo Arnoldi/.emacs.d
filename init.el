@@ -15,6 +15,10 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 (setq org-log-done t)
 
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+
 (global-set-key (kbd "C-d") 'duplicate-line)
 (global-set-key (kbd "<delete>") 'delete-char)
 
@@ -33,6 +37,6 @@
 (server-start)
 
 (load-file "~/.emacs.d/themes/inkpot-theme-20170709.1858.el")
-(find-file "u:/Dateien/Notes.org")
+(load-file "specific.el")
 
 ;(desktop-save-mode t) ; does not work with server mode
