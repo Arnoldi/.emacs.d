@@ -1,0 +1,14 @@
+# ignore history files
+history
+eshell/
+auto-save-list/
+tramp
+
+# ignore saved desktops
+.emacs.desktop*
+
+# ignore computer specific init file
+specific.el
+
+# ignore temp files
+*~
