@@ -18,9 +18,13 @@
 (require 'package)
 (add-to-list 'package-archives
              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+(package-initialize)
 
 (global-set-key (kbd "C-d") 'duplicate-line)
 (global-set-key (kbd "<delete>") 'delete-char)
+
+;; Rust
+(setq rust-format-on-save t)
 
 ;; define function to shutdown emacs server instance
 (defun server-shutdown ()
@@ -36,7 +40,9 @@
 
 (server-start)
 
+
+(load-file "~/.emacs.d/install.el")
 (load-file "~/.emacs.d/themes/inkpot-theme-20170709.1858.el")
-(load-file "specific.el")
+(load-file "~/.emacs.d/specific.el")
 
 ;(desktop-save-mode t) ; does not work with server mode

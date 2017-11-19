@@ -10,5 +10,8 @@ tramp
 # ignore computer specific init file
 specific.el
 
+# ignore elpa archive
+elpa/
+
 # ignore temp files
 *~
