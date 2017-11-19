@@ -34,6 +34,11 @@
   (kill-emacs)
   )
 
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
 (add-to-list 'auto-mode-alist '("\\.pde\\'" . java-mode))
 
 (savehist-mode 1)
