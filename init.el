@@ -43,7 +43,7 @@
 
 (savehist-mode 1)
 
-(server-start)
+;(server-start)
 
 
 (load-file "~/.emacs.d/install.el")
