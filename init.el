@@ -44,6 +44,14 @@
 (savehist-mode 1)
 
 ;(server-start)
+ 
+
+; line numbering
+(setq linum-format "%4d \u2502 ")
+(add-hook 'c++-mode-hook 'linum-mode)
+(add-hook 'c-mode-hook 'linum-mode)
+(add-hook 'java-mode-hook 'linum-mode)
+
 
 
 (load-file "~/.emacs.d/install.el")
