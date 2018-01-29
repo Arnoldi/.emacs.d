@@ -44,6 +44,11 @@
 (savehist-mode 1)
 
 (global-auto-revert-mode 1)
+(global-subword-mode 1)
+
+(setq-default c-basic-offset 2
+              tab-width 2
+              indent-tabs-mode t)
 
 ;(server-start)
 
