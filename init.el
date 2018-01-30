@@ -50,6 +50,9 @@
               tab-width 2
               indent-tabs-mode t)
 
+; smart tabs
+(smart-tabs-insinuate 'c 'c++ 'java)
+
 ;(server-start)
 
 ; line numbering
