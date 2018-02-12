@@ -42,6 +42,8 @@
 (add-to-list 'auto-mode-alist '("\\.pde\\'" . java-mode))
 
 (savehist-mode 1)
+(setq history-delete-duplicates t)
+(setq eshell-hist-ignoredups t)
 
 (global-auto-revert-mode 1)
 (global-subword-mode 1)
