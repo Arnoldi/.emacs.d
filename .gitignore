@@ -13,5 +13,7 @@ specific.el
 # ignore elpa archive
 elpa/
 
+session.*
+
 # ignore temp files
 *~
