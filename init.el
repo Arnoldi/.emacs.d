@@ -1,3 +1,5 @@
+(load "~/.emacs.d/install.el")
+
 (defun duplicate-line()
   (interactive)
   (move-beginning-of-line 1)
@@ -14,11 +16,6 @@
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
 (setq org-log-done t)
-
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
-(package-initialize)
 
 (global-set-key (kbd "C-d") 'duplicate-line)
 (global-set-key (kbd "<delete>") 'delete-char)
@@ -55,19 +52,14 @@
 ; smart tabs
 (smart-tabs-insinuate 'c 'c++ 'java)
 
-;(server-start)
-
 ; line numbering
 (setq linum-format "%4d \u2502 ")
 (add-hook 'c++-mode-hook 'linum-mode)
 (add-hook 'c-mode-hook 'linum-mode)
 (add-hook 'java-mode-hook 'linum-mode)
 
-
-
-(load-file "~/.emacs.d/install.el")
-(load-file "~/.emacs.d/themes/inkpot-theme-20170709.1858.el")
-(load-file "~/.emacs.d/specific.el")
+(load "~/.emacs.d/themes/inkpot-theme-20170709.1858.el")
+(load "~/.emacs.d/specific.el")
 
 ;(desktop-save-mode t) ; does not work with server mode
 (custom-set-variables
