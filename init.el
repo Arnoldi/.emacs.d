@@ -23,16 +23,12 @@
 ;; Rust
 (setq rust-format-on-save t)
 
-;; Scheme set geiser to guile scheme
-(setq geiser-active-implementations ‘(guile))
-
 ;; define function to shutdown emacs server instance
 (defun server-shutdown ()
   "Save buffers, Quit, and Shutdown (kill) server"
   (interactive)
   (save-some-buffers)
-  (kill-emacs)
-  )
+  (kill-emacs))
 
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
@@ -62,8 +58,7 @@
 (add-hook 'java-mode-hook 'linum-mode)
 
 (load "~/.emacs.d/themes/inkpot-theme-20170709.1858.el")
-(if (file-exists-p "~/.emacs.d/specific.el")
-		(load "~/.emacs.d/specific.el"))
+(load "~/.emacs.d/specific.el" 'missing-ok)
 
 ;(desktop-save-mode t) ; does not work with server mode
 (custom-set-variables

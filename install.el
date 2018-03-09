@@ -2,6 +2,7 @@
 (add-to-list 'package-archives
              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 
+
 ; list the required packages
 (setq package-list
       '(smart-tabs-mode smart-yank projectile rust-mode geiser));magit))
