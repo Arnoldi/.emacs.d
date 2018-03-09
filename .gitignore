@@ -17,3 +17,9 @@ session.*
 
 # ignore temp files
 *~
+
+# ignore cache
+*.cache
+
+# ignore projectile-bookmarks
+projectile-bookmarks.eld

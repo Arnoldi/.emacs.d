@@ -4,7 +4,7 @@
 
 ; list the required packages
 (setq package-list
-      '(smart-tabs-mode smart-yank projectile rust-mode));magit))
+      '(smart-tabs-mode smart-yank projectile rust-mode geiser));magit))
 
 ; activate all the packages
 (package-initialize)
