@@ -45,6 +45,7 @@
 (global-subword-mode 1)
 
 (setq-default c-basic-offset 2
+              c-default-style "linux"
               tab-width 2
               indent-tabs-mode t)
 
@@ -56,6 +57,7 @@
 (add-hook 'c++-mode-hook 'linum-mode)
 (add-hook 'c-mode-hook 'linum-mode)
 (add-hook 'java-mode-hook 'linum-mode)
+(add-hook 'emacs-lisp-mode-hook 'linum-mode)
 
 (load "~/.emacs.d/themes/inkpot-theme-20170709.1858.el")
 (load "~/.emacs.d/specific.el" 'missing-ok)
