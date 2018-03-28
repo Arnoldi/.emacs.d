@@ -49,6 +49,12 @@
               tab-width 2
               indent-tabs-mode t)
 
+(add-hook 'compilation-mode-hook 'toggle-truncate-lines)
+
+(projectile-global-mode)
+
+(windmove-default-keybindings)
+
 ; smart tabs
 (smart-tabs-insinuate 'c 'c++ 'java)
 
