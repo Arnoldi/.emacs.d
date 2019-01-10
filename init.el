@@ -44,10 +44,10 @@
 (global-auto-revert-mode 1)
 (global-subword-mode 1)
 
-(setq-default c-basic-offset 2
+(setq-default c-basic-offset 4
               c-default-style "linux"
-              tab-width 2
-              indent-tabs-mode t
+              tab-width 4
+              indent-tabs-mode nil
               c-set-offset 'case-label +)
 
 (add-hook 'compilation-mode-hook 'toggle-truncate-lines)
@@ -60,7 +60,7 @@
 (global-set-key (kbd "M-<down>") 'windmove-down)
 
 ; smart tabs
-(smart-tabs-insinuate 'c 'c++ 'java)
+;(smart-tabs-insinuate 'c 'c++ 'java)
 
 ; line numbering
 (setq linum-format "%4d \u2502 ")
@@ -76,7 +76,10 @@
 (load "~/.emacs.d/themes/inkpot-theme-20170709.1858.el")
 (load "~/.emacs.d/specific.el" 'missing-ok)
 
-;(desktop-save-mode t) ; does not work with server mode
+(setq url-proxy-services '(("http" . "127.0.0.1:3128")))
+
+(desktop-save-mode t) ; does not work with server mode
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
