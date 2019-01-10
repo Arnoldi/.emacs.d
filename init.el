@@ -47,13 +47,17 @@
 (setq-default c-basic-offset 2
               c-default-style "linux"
               tab-width 2
-              indent-tabs-mode t)
+              indent-tabs-mode t
+              c-set-offset 'case-label +)
 
 (add-hook 'compilation-mode-hook 'toggle-truncate-lines)
 
 (projectile-global-mode)
 
-(windmove-default-keybindings)
+(global-set-key (kbd "M-<right>") 'windmove-right)
+(global-set-key (kbd "M-<left>") 'windmove-left)
+(global-set-key (kbd "M-<up>") 'windmove-up)
+(global-set-key (kbd "M-<down>") 'windmove-down)
 
 ; smart tabs
 (smart-tabs-insinuate 'c 'c++ 'java)
@@ -64,6 +68,10 @@
 (add-hook 'c-mode-hook 'linum-mode)
 (add-hook 'java-mode-hook 'linum-mode)
 (add-hook 'emacs-lisp-mode-hook 'linum-mode)
+(add-hook 'feature-mode-hook 'linum-mode)
+
+(add-to-list 'auto-mode-alist '("\\.model\\'" . java-mode))
+(add-to-list 'auto-mode-alist '("\\.xtend\\'" . java-mode))
 
 (load "~/.emacs.d/themes/inkpot-theme-20170709.1858.el")
 (load "~/.emacs.d/specific.el" 'missing-ok)
@@ -74,7 +82,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(scheme-program-name "guile"))
+ '(scheme-program-name "guile")
+ '(shell-file-name "/bin/bash")
+ '(tab-width 2))
 ;(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
