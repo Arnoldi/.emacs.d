@@ -52,6 +52,8 @@
 
 (add-hook 'compilation-mode-hook 'toggle-truncate-lines)
 
+(setq dired-listing-switches "-alh")
+
 (projectile-global-mode)
 
 (global-set-key (kbd "M-<right>") 'windmove-right)
