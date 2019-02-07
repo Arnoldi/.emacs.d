@@ -87,6 +87,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(magit-log-arguments (quote ("--graph" "--color" "--decorate" "-n256")))
  '(scheme-program-name "guile")
  '(shell-file-name "/bin/bash")
  '(tab-width 2))
