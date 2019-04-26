@@ -54,6 +54,9 @@
 
 (setq dired-listing-switches "-alh")
 
+;; Auto-refresh dired on file change
+(add-hook 'dired-mode-hook 'auto-revert-mode)
+
 (projectile-global-mode)
 
 (global-set-key (kbd "M-<right>") 'windmove-right)
