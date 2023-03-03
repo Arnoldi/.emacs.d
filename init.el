@@ -20,6 +20,7 @@
 (global-set-key (kbd "C-d") 'duplicate-line)
 (global-set-key (kbd "<delete>") 'delete-char)
 
+(global-unset-key (kbd "C-x C-c"))
 ;; Rust
 (setq rust-format-on-save t)
 
@@ -58,6 +59,8 @@
 (add-hook 'dired-mode-hook 'auto-revert-mode)
 
 (projectile-global-mode)
+(setq projectile-project-search-path '("~/src/" "~/Documents/"))
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 (global-set-key (kbd "M-<right>") 'windmove-right)
 (global-set-key (kbd "M-<left>") 'windmove-left)
@@ -81,8 +84,6 @@
 (load "~/.emacs.d/themes/inkpot-theme-20170709.1858.el")
 (load "~/.emacs.d/specific.el" 'missing-ok)
 
-(setq url-proxy-services '(("http" . "127.0.0.1:3128")))
-
 (desktop-save-mode t) ; does not work with server mode
 
 (custom-set-variables
@@ -90,10 +91,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(compilation-scroll-output (quote first-error))
+ '(grep-find-ignored-directories
+	 (quote
+		("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" "_doc_" "_build_" "_build_gen_" "_build_debug_native_" "_build_*" "build-output")))
  '(magit-log-arguments (quote ("--graph" "--color" "--decorate" "-n256")))
  '(scheme-program-name "guile")
  '(shell-file-name "/bin/bash")
- '(tab-width 2))
 ;(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
